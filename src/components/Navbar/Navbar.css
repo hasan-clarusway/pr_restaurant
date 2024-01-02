@@ -1,0 +1,120 @@
+.blc__navbar {
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-black);
+    padding: 1rem 2rem;
+}
+
+.blc__navbar-logo {
+    display: flex;
+    align-items: center;
+    color: var(--color-golden);
+    font-family: var(--font-base);
+    font-size: 2rem;
+}
+
+.blc__navbar-links {
+    display: flex;
+    list-style: none;
+}
+
+.blc__navbar-links li {
+    cursor: pointer;
+}
+
+.blc__navbar-links li:hover {
+    color: var(--color-gray);
+}
+
+.blc__navbar-login {
+    color: var(--color-white);
+    display: flex;
+}
+
+.blc__navbar-login a {
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.blc__navbar-login a:hover {
+    border-bottom: 1px solid var(--color-golden);
+}
+
+.blc__navbar-login div {
+    width: 1px;
+    background: var(--color-gray);
+}
+
+.blc__navbar-smallscreen {
+    display: none;
+}
+
+.blc__navbar-smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-black);
+    transition: .5s ease;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.blc__navbar-smallscreen_overlay .overlay__close {
+    font-size: 27px;
+    color: var(--color-golden);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.blc__navbar-smallscreen_links {
+    list-style: none;
+}
+
+.blc__navbar-smallscreen_links li {
+    margin: 2rem;
+    cursor: pointer;
+    color: var(--color-golden);
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--font-base);
+}
+
+.blc__navbar-smallscreen_links li:hover {
+    color: var(--color-white);
+}
+
+@media screen and (max-width: 1150px) {
+    .blc__navbar {
+        padding: 1rem;
+    }
+
+    .blc__navbar-login {
+        width: 22rem;
+    }
+
+    .blc__navbar-links {
+        display: none;
+    }
+
+    .blc__navbar-smallscreen {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .blc__navbar {
+        padding: 1rem;
+    }
+
+    .blc__navbar-login {
+        display: none;
+    }
+
+    .blc__navbar-logo img {
+        width: 10px;
+    }
+}
